@@ -1,0 +1,41 @@
+* {
+    padding-left: 20px;
+    background-color: #2596be;
+}
+
+.player {
+    background-color: transparent;
+}
+
+#cco {
+    max-width: 100px;
+}
+
+/*
+.player {
+    position: relative;
+    padding: 100px;
+
+}
+
+
+
+.ball2 {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    left: 199px;
+    //top: 76px;
+width: 20 px;
+height: 20 px;
+}
+
+.ball {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    size: 0.5em;
+
+}
+
+*/
