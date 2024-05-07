@@ -11,31 +11,18 @@
     max-width: 100px;
 }
 
-/*
-.player {
-    position: relative;
-    padding: 100px;
-
+#drag-1,
+#drag-2,
+#drag-3,
+#drag-4,
+#drag-5 {
+    width: max-content;
+    min-height: 2.5em;
+    margin: 1rem;
+    background-color: none;
+    color: white;
+    border-radius: 0.75em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
 }
-
-
-
-.ball2 {
-    cursor: pointer;
-    position: absolute;
-    z-index: 1000;
-    left: 199px;
-    //top: 76px;
-width: 20 px;
-height: 20 px;
-}
-
-.ball {
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    size: 0.5em;
-
-}
-
-*/
