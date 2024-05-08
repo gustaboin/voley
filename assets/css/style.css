@@ -1,6 +1,6 @@
 * {
     padding-left: 20px;
-    background-color: #2596be;
+    background-color: transparent;
 }
 
 .player {
@@ -8,7 +8,7 @@
 }
 
 #cco {
-    max-width: 100px;
+    max-width: 100 px;
 }
 
 #drag-1,
@@ -17,11 +17,11 @@
 #drag-4,
 #drag-5 {
     width: max-content;
-    min-height: 2.5em;
-    margin: 1rem;
+    min-height: 2.5 em;
+    margin: 1 rem;
     background-color: none;
     color: white;
-    border-radius: 0.75em;
+    border-radius: 0.75 em;
     touch-action: none;
     user-select: none;
     transform: translate(0px, 0px);
