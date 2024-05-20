@@ -1,100 +1,47 @@
-/**************************************************** */
-/******** este codigo es para un sola img            */
-/************************************************** */
-
-/*
-
-ball.onmousedown = function (event)
-{
-    // (1) preparar para mover: hacerlo absoluto y ponerlo sobre todo con el z-index
-    ball.style.position = 'absolute';
-    ball.style.zIndex = 1000;
-
-    // quitar cualquier padre actual y moverlo directamente a body
-    // para posicionarlo relativo al body
-    document.body.append(ball);
-
-    // centrar la pelota en las coordenadas (pageX, pageY)
-    function moveAt(pageX, pageY)
-    {
-        ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
-        ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
-    }
-
-    // mover nuestra pelota posicionada absolutamente bajo el puntero
-    moveAt(event.pageX, event.pageY);
-
-    function onMouseMove(event)
-    {
-        moveAt(event.pageX, event.pageY);
-    }
-
-    // (2) mover la pelota con mousemove
-    document.addEventListener('mousemove', onMouseMove);
-
-    // (3) soltar la pelota, quitar cualquier manejador de eventos innecesario
-    ball.onmouseup = function ()
-    {
-        document.removeEventListener('mousemove', onMouseMove);
-        ball.onmouseup = null;
-    };
-
-};
-
-ball.ondragstart = function ()
-{
-    return false;
-};
-*/
-/*
-Select.addEventListener("change", () =>
-{
-    play1.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play2.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play3.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play4.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play5.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play6.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-});
-
-Select.addEventListener("change", () =>
-{
-    play1.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play2.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play3.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play4.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play5.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-    play6.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
-});*/
-
-
-
 const localTeamSelect = document.getElementById('localTeamSelect');
 const visitorTeamSelect = document.getElementById('visitorTeamSelect');
 const local = document.querySelectorAll('.local');
 const visitor = document.querySelectorAll('.visitor');
+const numero = document.querySelectorAll('.numero');
+const numVisita = document.querySelectorAll('.numVisita');
 
 localTeamSelect.addEventListener('change', () =>
 {
     const selectedValue = localTeamSelect.value;
-    console.log(selectedValue);
+    //console.log(selectedValue);
 
     if (selectedValue)
     {
-
 
         local.forEach((img, index) =>
         {
             img.setAttribute('src', `assets/img/${selectedValue}.png`);
             img.setAttribute('alt', `Player ${index + 1}`);
         });
+        document.getElementById("ball").setAttribute('src', 'assets/img/ball.png');
+
+        // hace visible los numeros de cada jugador cuando hay un equipo elegido
+        numero.forEach(p =>
+        {
+            p.style.visibility = 'visible';
+        });
     }
     else
+    {
         local.forEach((img, index) =>
         {
             img.removeAttribute('src');
             img.removeAttribute('alt');
+            document.getElementById("ball").setAttribute('src', '');
+        })
+        // Haz invisibles los elementos con clase "numero" cuando no hay equipo seleccionado
+        numero.forEach(p =>
+        {
+            p.style.visibility = 'hidden';
         });
+    }
+
+
 });
 
 visitorTeamSelect.addEventListener('change', () =>
@@ -107,19 +54,28 @@ visitorTeamSelect.addEventListener('change', () =>
         {
             img.setAttribute('src', `assets/img/${selectedValue}.png`);
             img.setAttribute('alt', `Player ${index + 1}`);
-
         });
 
-        document.getElementById("ball").setAttribute('src', 'assets/img/ball1.png');
+        // hace visible los numeros de cada jugador cuando hay un equipo elegido
+        numVisita.forEach(p =>
+        {
+            p.style.visibility = 'visible';
+        });
     }
     else
+    {
         visitor.forEach((img, index) =>
         {
             img.removeAttribute('src');
             img.removeAttribute('alt');
-            document.getElementById("ball").setAttribute('src', '');
         });
 
+        // Haz invisibles los elementos con clase "numero" cuando no hay equipo seleccionado
+        numVisita.forEach(p =>
+        {
+            p.style.visibility = 'hidden';
+        });
+    }
 });
 
 function makeElementDraggable(element)
