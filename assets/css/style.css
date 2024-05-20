@@ -1,36 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 * {
     padding-left: 20px;
     background-color: transparent;
 }
 
-.player {
+.player,
+.local,
+.visitor {
+    background-color: transparent;
+    position: relative;
+}
+
+
+.container {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: transparent;
 }
 
-#cco {
-    max-width: 100 px;
+.container>div {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
 }
 
-#drag-0,
-#drag-1,
-#drag-2,
-#drag-3,
-#drag-4,
-#drag-5,
-#drag-6 {
-    width: max-content;
-    min-height: 2.5 em;
-    margin: 1 rem;
-    background-color: none;
-    color: white;
-    border-radius: 0.75 em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
+
+
+.logo {
+    max-width: 10%;
 }
+
+/****************************************************/
+/* Posiciones iniciales de los jugadores locales   */
+/**************************************************/
+
+#play12 {
+    position: absolute;
+    z-index: 1000;
+    left: 1348px;
+    top: 442px;
+}
+
+#play11 {
+    position: absolute;
+    z-index: 1000;
+    left: 1344px;
+    top: 739px;
+}
+
+#play10 {
+    position: absolute;
+    z-index: 1000;
+    left: 1234.5px;
+    top: 642.5px;
+}
+
+#play9 {
+    position: absolute;
+    z-index: 1000;
+    left: 998px;
+    top: 520px;
+}
+
+#play8 {
+    position: absolute;
+    z-index: 1000;
+    left: 991px;
+    top: 722px;
+}
+
+#play7 {
+    position: absolute;
+    z-index: 1000;
+    left: 1131px;
+    top: 335px;
+}
+
+#play4 {
+    position: absolute;
+    z-index: 1000;
+    left: 383px;
+    top: 360.5px;
+}
+
+#play5 {
+    position: absolute;
+    z-index: 1000;
+    left: 313px;
+    top: 724.5px;
+}
+
+#play6 {
+    position: absolute;
+    z-index: 1000;
+    left: 441px;
+    top: 554.5px;
+}
+
+#play1 {
+    position: absolute;
+    z-index: 1000;
+    left: 763px;
+    top: 316.5px;
+}
+
+#play2 {
+    position: absolute;
+    z-index: 1000;
+    left: 765px;
+    top: 604.5px;
+}
+
+#play3 {
+    position: absolute;
+    z-index: 1000;
+    left: 725px;
+    top: 758.5px;
+}
+
+#ball {
+    position: absolute;
+    z-index: 1000;
+    left: 1430px;
+    top: 260px
+}
+
+
+.objeto {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.numero {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-family: 'Righteous';
+    transform: translate(-50%, -50%);
+}
+
+
+
+.draggable {
+    display: none;
+}
+
+
+/* Estilos básicos para el select */
+select {
+    appearance: none;
+    /* Elimina el estilo por defecto */
+    -webkit-appearance: none;
+    /* Elimina el estilo por defecto en Safari y Chrome */
+    -moz-appearance: none;
+    /* Elimina el estilo por defecto en Firefox */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    max-width: 200px;
+    /* Ancho máximo para el select */
+    margin: 10px 0;
+}
+
+/* Estilos para el icono de la flecha */
+select::after {
+    content: '\25BC';
+    /* Código Unicode para la flecha hacia abajo */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Contenedor para posicionar el icono de la flecha */
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Estilos para cuando el select está enfocado */
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para los options */
+select option {
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .draggable {
+        display: block;
+    }
+
+    #drag-0,
+    #drag-1,
+    #drag-2,
+    #drag-3,
+    #drag-4,
+    #drag-5,
+    #drag-6 {
+        width: max-content;
+        min-height: 2.5 em;
+        margin: 1 rem;
+        background-color: none;
+        color: white;
+        border-radius: 0.75 em;
+        touch-action: none;
+        user-select: none;
+        transform: translate(0px, 0px);
+    }
+
+}
+
+
+/*****************************************************************/
+/*              tarjetas de tacticas                            */
+/***************************************************************/
+
+
+.tarjeta {
+    display: block;
+    color: white;
+    padding: 50px 20px;
+}
+
+.tarjeta .t-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tarjeta h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.tarjeta .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta .row .column {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.tarjeta .row .column h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.tarjeta .row .right {
+    border-left: 2px solid red;
+}
+
+.tarjeta .row .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #006064;
+    position: relative;
+}
+
+.tarjeta .row .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjeta .row .item .house {
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.tarjeta .row .item .date {
+    display: block;
+    color: #006064;
+    margin-bottom: 10px;
+}
+
+.tarjeta .row .item p {
+    line-height: 24px;
+}
+
+.tarjeta .row .left {
+    border-right: 2px solid var(--fourth-color);
+    margin-right: 20px;
+}
+
+.tarjeta .row .right {
+    border-left: 2px solid var(--fourth-color);
+    margin-left: 20px;
+}
+
+
+.tarjeta .row .item .connectd {
+    height: 2px;
+    background-color: var(--fourth-color);
+    width: 47px;
+    position: absolute;
+    top: 66%;
+    left: -47px;
+    z-index: 5;
+}
+
+.tarjeta .row .item .connectd .circled {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--fourth-color);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 700px) {
-    .container {
+    .playWeb {
         display: none;
     }
+
+    .field {
+        display: none;
+    }
+
+    .mobile {
+        background-image: url("assets/img/field.jpg");
+    }
+}

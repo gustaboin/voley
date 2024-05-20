@@ -46,6 +46,81 @@ ball.ondragstart = function ()
     return false;
 };
 */
+/*
+Select.addEventListener("change", () =>
+{
+    play1.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play2.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play3.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play4.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play5.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play6.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+});
+
+Select.addEventListener("change", () =>
+{
+    play1.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play2.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play3.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play4.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play5.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+    play6.setAttribute("src", "assets/img/" + Select.selectedOptions[0].value + ".png")
+});*/
+
+
+
+const localTeamSelect = document.getElementById('localTeamSelect');
+const visitorTeamSelect = document.getElementById('visitorTeamSelect');
+const local = document.querySelectorAll('.local');
+const visitor = document.querySelectorAll('.visitor');
+
+localTeamSelect.addEventListener('change', () =>
+{
+    const selectedValue = localTeamSelect.value;
+    console.log(selectedValue);
+
+    if (selectedValue)
+    {
+
+
+        local.forEach((img, index) =>
+        {
+            img.setAttribute('src', `assets/img/${selectedValue}.png`);
+            img.setAttribute('alt', `Player ${index + 1}`);
+        });
+    }
+    else
+        local.forEach((img, index) =>
+        {
+            img.removeAttribute('src');
+            img.removeAttribute('alt');
+        });
+});
+
+visitorTeamSelect.addEventListener('change', () =>
+{
+    const selectedValue = visitorTeamSelect.value;
+
+    if (selectedValue)
+    {
+        visitor.forEach((img, index) =>
+        {
+            img.setAttribute('src', `assets/img/${selectedValue}.png`);
+            img.setAttribute('alt', `Player ${index + 1}`);
+
+        });
+
+        document.getElementById("ball").setAttribute('src', 'assets/img/ball1.png');
+    }
+    else
+        visitor.forEach((img, index) =>
+        {
+            img.removeAttribute('src');
+            img.removeAttribute('alt');
+            document.getElementById("ball").setAttribute('src', '');
+        });
+
+});
 
 function makeElementDraggable(element)
 {
@@ -104,17 +179,7 @@ makeElementDraggable(play7);
 makeElementDraggable(play8);
 makeElementDraggable(play9);
 makeElementDraggable(play10);
-//makeElementDraggable(play11);
+makeElementDraggable(play11);
 makeElementDraggable(play12);
-makeElementDraggable(play13);
-makeElementDraggable(play14);
-makeElementDraggable(play15);
-makeElementDraggable(play16);
-makeElementDraggable(play17);
-makeElementDraggable(play18);
-makeElementDraggable(play19);
-makeElementDraggable(play20);
-makeElementDraggable(play21);
-makeElementDraggable(play22);
-makeElementDraggable(play23);
-makeElementDraggable(play24);
+
+

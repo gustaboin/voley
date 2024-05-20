@@ -13,65 +13,116 @@
 
 <body>
 
-
     <div class="container">
-        <img src="assets/img/cco.png" alt="" id="cco">
-        <img src="assets/img/ball.png" alt="" class="player" id="ball">
-        <img src="assets/img/pikachu.png" alt="" class="player" id="play1">
-        <img src="assets/img/nidoranR.png" alt="" class="player" id="play2">
-        <img src="assets/img/tauros.png" alt="" class="player" id="play3">
-        <img src="assets/img/weedle.png" alt="" class="player" id="play4">
-        <img src="assets/img/charmeleon.png" alt="" class="player" id="play5">
-        <img src="assets/img/raticateR.png" alt="" class="player" id="play6">
-        <img src="assets/img/charmander.png" alt="" class="player" id="play7">
-        <img src="assets/img/cuboneR.png" alt="" class="player" id="play8">
-        <img src="assets/img/eevee.png" alt="" class="player" id="play9">
-        <img src="assets/img/jolteon.png" alt="" class="player" id="play10">
-        <!--<img src="assets/img/wartortle.png" alt="" id="play11">-->
-        <img src="assets/img/vulpix.png" alt="" class="player" id="play12">
-    </div>
-    <div class="field">
-        <img src="assets/img/18973ac386937ee30d2feda3e187555c.jpg" alt="">
-    </div>
-<!--    <div class="container">
-        <img src="assets/img/cco.png" alt="" id="cco">
-        <img src="assets/img/pikachuLeft.png" alt="" class="player" id="play13">
-        <img src="assets/img/rattataLeft.png" alt="" class="player" id="play14">
-        <img src="assets/img/squirtleLeft.png" alt="" class="player" id="play15">
-        <img src="assets/img/bulbasaurLeft.png" alt="" class="player" id="play16">
-        <img src="assets/img/kadabra.png" alt="" class="player" id="play17">
-        <img src="assets/img/arbokLeft.png" alt="" class="player" id="play18">
-        <img src="assets/img/ivysaur.png" alt="" class="player" id="play19">
-        <img src="assets/img/wartortleLeft.png" alt="" class="player" id="play20">
-        <img src="assets/img/mewtwo.png" alt="" class="player" id="play21">
-        <img src="assets/img/gyaradosLeft.png" alt="" class="player" id="play22">
-        <img src="assets/img/beedrill.png" alt="" class="player" id="play23">
-    </div>-->
-    <div id="drag-0" class="draggable">
-        <img src="assets/img/ball.png" alt="">
-    </div>
-    <div id="drag-1" class="draggable">
-        <img src="assets/img/squirtleLeft.png" alt="">
-    </div>
-    <div id="drag-2" class="draggable">
-        <img src="assets/img/bulbasaurLeft.png" alt="">
-    </div>
-    <div id="drag-3" class="draggable">
-        <img src="assets/img/charmander.png" alt="">
+
+
+        <!--<div class="logo">
+            <img src="assets/img/cco.png" alt="" class="cco" id="cco">
+        </div> -->
+        <div class="choice">
+            <select id="localTeamSelect">
+                <option value="">Equipo Local</option>
+                <option value="squirtleLeft">Squirtle</option>
+                <option value="ivysaur">Ivyasur</option>
+                <option value="eeveeLeft">Eve</option>
+                <option value="charmanderLeft">Charmander</option>
+                <option value="charmeleonLeft">Charmeleon</option>
+                <option value="rattataLeft">Ratata</option>
+                <option value="bulbasaurLeft">Bulbasur</option>
+
+            </select>
+            <select id="visitorTeamSelect">
+                <option value="">Equipo Visitante</option>
+                <option value="pikachu">Pikachu</option>
+                <option value="tauros">Tauros</option>
+                <option value="mewtwoR">Mewtwo</option>
+                <option value="nidoranR">Nidoran</option>
+                <option value="kadabraR">Kadabra</option>
+                <option value="vulpix">Vulpix</option>
+            </select>
+            <select id="playSistem">
+                <option value="">Sistema de juego</option>
+                <option value="4-2">Sistema 4-2</option>
+                <option value="6-6">Sistema 6-6</option>
+                <option value="5-1">Sistema 5-1</option>
+                <option value="6-2">Sitema 6-2</option>
+            </select>
+            <select id="System">
+                <option value="0">Tácticas</option>
+                <optgroup label="Sistema 5-1" data-max-options="2">
+                    <option value="1">Armador en 1</option>
+                    <option value="2">Armador en 2</option>
+                    <option value="3">Armador en 3</option>
+                    <option value="4">Armador en 4</option>
+                    <option value="5">Armador en 5</option>
+                    <option value="6">Armador en 6</option>
+                <optgroup label="Sistema 4-2" data-max-options="2">
+                    <option value="8">Punta</option>
+                    <option value="9">Central</option>
+                    <option value="10">Líbero</option>
+                    <option value="11">Armador</option>
+                <optgroup label="Sistema 6-6" data-max-options="2">
+                    <option value="13">Ventajas</option>
+                    <option value="14">Desventajas</option>
+                <optgroup label="Sistema 6-2" data-max-options="2">
+                    <option value="16">Ventajas</option>
+                    <option value="17">Desventajas</option>
+            </select>
+        </div>
+
     </div>
 
-    <div id="drag-4" class="draggable">
-        <img src="assets/img/rattataLeft.png" alt="">
+    <div class="playWeb">
+
+        <div class="objeto" id="play1"><img src="" alt="" class="local">
+            <div class="numero" id="numero"></div>
+        </div>
+        <img src="" alt="" class="local" id="play2">
+        <img src="" alt="" class="local" id="play3">
+        <img src="" alt="" class="local" id="play4">
+        <img src="" alt="" class="local" id="play5">
+        <img src="" alt="" class="local" id="play6">
+        <img src="" alt="" class="visitor" id="play7">
+        <img src="" alt="" class="visitor" id="play8">
+        <img src="" alt="" class="visitor" id="play9">
+        <img src="" alt="" class="visitor" id="play10">
+        <img src="" alt="" class="visitor" id="play11">
+        <img src="" alt="" class="visitor" id="play12">
+        <img src="" alt="" class="ball" id="ball">
+    </div>
+    <div class="mobile">
+        <div id="drag-0" class="draggable">
+            <img src="assets/img/ball.png" alt="" class="local">
+        </div>
+        <div id="drag-1" class="draggable">
+            <img src="assets/img/squirtleLeft.png" alt="" class="local">
+        </div>
+        <div id="drag-2" class="draggable">
+            <img src="assets/img/bulbasaurLeft.png" alt="" class="local">
+        </div>
+        <div id="drag-3" class="draggable">
+            <img src="assets/img/charmander.png" alt="" class="local">
+        </div>
+
+        <div id="drag-4" class="draggable">
+            <img src="assets/img/rattataLeft.png" alt="" class="local">
+        </div>
+
+        <div id="drag-5" class="draggable">
+            <img src="assets/img/ivysaur.png" alt="" class="local">
+        </div>
+        <div id="drag-6" class="draggable">
+            <img src="assets/img/wartortleLeft.png" alt="" class="local">
+        </div>
+
+        <div class="field">
+            <img src="assets/img/field.png" alt="">
+        </div>
     </div>
 
-    <div id="drag-5" class="draggable">
-        <img src="assets/img/ivysaur.png" alt="">
-    </div>
-    <div id="drag-6" class="draggable">
-        <img src="assets/img/wartortleLeft.png" alt="">
-    </div>
 </body>
 <script src="assets/js/move_player.js"></script>
 <script src="assets/js/clase.js"></script>
+<script src="assets/js/mov.js"></script>
 
 </html>
