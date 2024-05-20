@@ -126,7 +126,7 @@
 #ball {
     position: absolute;
     z-index: 1000;
-    left: 1430px;
+    left: 360px;
     top: 260px
 }
 
@@ -137,15 +137,26 @@
     text-align: center;
 }
 
-.numero {
+.numero,
+.numVisita {
+    visibility: hidden;
+}
+
+#numero {
     position: relative;
-    top: 50%;
-    left: 50%;
     font-family: 'Righteous';
     transform: translate(-50%, -50%);
 }
 
-
+p {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #2596be;
+    border-radius: 100%;
+    width: 22px;
+    height: 32px;
+    font-size: 20px;
+}
 
 .draggable {
     display: none;
@@ -354,5 +365,24 @@ select option {
 
     .mobile {
         background-image: url("assets/img/field.jpg");
+    }
+
+    .choice {
+        display: inline-flex;
+        width: 100% !important;
+        margin: 10px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    select {
+        font-size: 12px;
+        background-color: #2596be;
+        color: #FFF;
+    }
+
+    #playSystem,
+    #System {
+        display: none;
     }
 }
