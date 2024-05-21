@@ -11,12 +11,20 @@ let posicion = mainCanvas.getBoundingClientRect();
 correccionX = posicion.x;
 correccionY = posicion.y;
 
+
+
 const dibujar = (cursorX, cursorY) =>
 {
+    // aca defino el color que quiere utilizar para dibujar
+    // lo meto adentro del dibujo para no perder lo que ya tengo dibujado
+    const trazo = document.getElementById("color");
+    const selectedValue = trazo.value;
+    console.log(selectedValue);
+        
     context.beginPath();
     context.moveTo(initialX, initialY);
     context.lineWidth = 10;
-    context.strokeStyle = "#000";
+    context.strokeStyle = selectedValue;
     context.lineCap = "round";
     context.lineJoin = "round";
     context.lineTo(cursorX, cursorY);
