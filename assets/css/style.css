@@ -30,7 +30,6 @@
 }
 
 
-
 .logo {
     max-width: 10%;
 }
@@ -72,6 +71,7 @@
     z-index: 1000;
     left: 991px;
     top: 722px;
+    filter: brightness(140%);
 }
 
 #play7 {
@@ -107,6 +107,7 @@
     z-index: 1000;
     left: 763px;
     top: 316.5px;
+    filter: brightness(140%);
 }
 
 #play2 {
@@ -126,7 +127,7 @@
 #ball {
     position: absolute;
     z-index: 1000;
-    left: 360px;
+    left: 430px;
     top: 260px
 }
 
@@ -137,26 +138,23 @@
     text-align: center;
 }
 
-.numero,
-.numVisita {
+/*
+p {
     visibility: hidden;
 }
 
-#numero {
+.numero {
     position: relative;
+    top: 50%;
+    left: 50%;
     font-family: 'Righteous';
     transform: translate(-50%, -50%);
 }
-
-p {
-    display: inline-block;
-    text-decoration: none;
-    border: 3px solid #2596be;
-    border-radius: 100%;
-    width: 22px;
-    height: 32px;
-    font-size: 20px;
+*/
+.numero {
+    visibility: hidden;
 }
+
 
 .draggable {
     display: none;
@@ -214,6 +212,31 @@ select option {
     padding: 10px;
 }
 
+/* Estilo para el botón */
+.button-borrar {
+    background-color: #f2f2f2; 
+    color: #fc0d0d; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-family: 'Righteous';
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para cuando el cursor está sobre el botón */
+  .button-borrar:hover {
+    background-color: #e0e0e0; 
+    color: #007BFF; 
+  }
+  
+  /* Estilo para cuando el botón está activo o presionado */
+  .button-borrar:active {
+    background-color: #ccc;
+    color: #000; 
+  }
+
 @media screen and (max-width: 700px) {
 
     .draggable {
@@ -240,11 +263,6 @@ select option {
 
 }
 
-
-/*****************************************************************/
-/*              contexto canvas                            */
-/***************************************************************/
-
 .main-container {
     background-color: rgb(113, 128, 212);
     height: 100vh;
@@ -258,8 +276,6 @@ select option {
     background-color: #fff;
   }
 
-
-
 @media screen and (max-width: 700px) {
     .playWeb {
         display: none;
@@ -271,24 +287,5 @@ select option {
 
     .mobile {
         background-image: url("assets/img/field.jpg");
-    }
-
-    .choice {
-        display: inline-flex;
-        width: 100% !important;
-        margin: 10px;
-        padding: 10px;
-        align-items: center;
-    }
-
-    select {
-        font-size: 12px;
-        background-color: #2596be;
-        color: #FFF;
-    }
-
-    #playSystem,
-    #System {
-        display: none;
     }
 }
