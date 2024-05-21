@@ -1,5 +1,5 @@
 //Guardar el elemento y el contexto
-const mainCanvas = document.getElementById("main-canvas");
+const mainCanvas = document.getElementById("main-container");
 const context = mainCanvas.getContext("2d");
 
 let initialX;
@@ -15,7 +15,7 @@ const dibujar = (cursorX, cursorY) =>
 {
     context.beginPath();
     context.moveTo(initialX, initialY);
-    context.lineWidth = 50;
+    context.lineWidth = 10;
     context.strokeStyle = "#000";
     context.lineCap = "round";
     context.lineJoin = "round";
