@@ -76,3 +76,8 @@ mainCanvas.addEventListener("mouseup", mouseUp);
 //pantallas tactiles
 mainCanvas.addEventListener('touchstart', mouseDown);
 mainCanvas.addEventListener('touchend', mouseUp);
+
+// boton para borrar el dibujo
+function borrarDibujo() {
+context.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+};
