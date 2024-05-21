@@ -138,21 +138,32 @@
     text-align: center;
 }
 
-/*
-p {
+
+.objeto {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.numero,
+.numVisita {
     visibility: hidden;
 }
 
-.numero {
+#numero {
     position: relative;
-    top: 50%;
-    left: 50%;
     font-family: 'Righteous';
     transform: translate(-50%, -50%);
 }
-*/
-.numero {
-    visibility: hidden;
+
+p {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid #2596be;
+    border-radius: 100%;
+    width: 22px;
+    height: 32px;
+    font-size: 20px;
 }
 
 
