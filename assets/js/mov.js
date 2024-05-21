@@ -19,7 +19,9 @@ const dibujar = (cursorX, cursorY) =>
     // lo meto adentro del dibujo para no perder lo que ya tengo dibujado
     const trazo = document.getElementById("color");
     const selectedValue = trazo.value;
-    console.log(selectedValue);
+
+    trazo.style.color = selectedValue;
+    trazo.style.fontWeight = "bold";
         
     context.beginPath();
     context.moveTo(initialX, initialY);
