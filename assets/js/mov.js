@@ -1,4 +1,4 @@
-//Guardar el elemento y el contexto
+// Guardar el elemento y el contexto
 const mainCanvas = document.getElementById("main-container");
 const context = mainCanvas.getContext("2d");
 
@@ -11,18 +11,11 @@ let posicion = mainCanvas.getBoundingClientRect();
 correccionX = posicion.x;
 correccionY = posicion.y;
 
-
-
 const dibujar = (cursorX, cursorY) =>
 {
-    // aca defino el color que quiere utilizar para dibujar
-    // lo meto adentro del dibujo para no perder lo que ya tengo dibujado
     const trazo = document.getElementById("color");
     const selectedValue = trazo.value;
 
-    trazo.style.color = selectedValue;
-    trazo.style.fontWeight = "bold";
-    
     context.beginPath();
     context.moveTo(initialX, initialY);
     context.lineWidth = 10;
@@ -45,11 +38,9 @@ const mouseDown = (evt) =>
         initialY = evt.offsetY;
     } else
     {
-        //evita desfase al dibujar
         initialX = evt.changedTouches[0].pageX - correccionX;
         initialY = evt.changedTouches[0].pageY - correccionY;
     }
-    dibujar(initialX, initialY);
     mainCanvas.addEventListener("mousemove", mouseMoving);
     mainCanvas.addEventListener('touchmove', mouseMoving);
 };
@@ -74,13 +65,15 @@ const mouseUp = () =>
 
 mainCanvas.addEventListener("mousedown", mouseDown);
 mainCanvas.addEventListener("mouseup", mouseUp);
+mainCanvas.addEventListener('mouseleave', mouseUp); // Para detener el dibujo si el ratón sale del lienzo
 
-//pantallas tactiles
+// Pantallas táctiles
 mainCanvas.addEventListener('touchstart', mouseDown);
 mainCanvas.addEventListener('touchend', mouseUp);
+mainCanvas.addEventListener('touchcancel', mouseUp); // Para detener el dibujo si el toque se cancela
 
-// boton para borrar el dibujo
+// Botón para borrar el dibujo
 function borrarDibujo()
 {
     context.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
-};
+}
