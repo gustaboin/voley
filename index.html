@@ -19,9 +19,9 @@
         <!--<div class="logo">
             <img src="assets/img/cco.png" alt="" class="cco" id="cco">
         </div> -->
-        <div class="choice">
+        <div class="choice" id="choice">
             <select id="localTeamSelect">
-                <option value="">Equipo Local</option>
+                <option value="">Local</option>
                 <option value="squirtleLeft">Squirtle</option>
                 <option value="ivysaur">Ivyasur</option>
                 <option value="eeveeLeft">Eve</option>
@@ -32,7 +32,7 @@
 
             </select>
             <select id="visitorTeamSelect">
-                <option value="">Equipo Visitante</option>
+                <option value="">Visitante</option>
                 <option value="pikachu">Pikachu</option>
                 <option value="tauros">Tauros</option>
                 <option value="mewtwoR">Mewtwo</option>
@@ -41,7 +41,7 @@
                 <option value="vulpix">Vulpix</option>
             </select>
             <select id="playSystem">
-                <option value="">Sistema de juego</option>
+                <option value="">Formaciones</option>
                 <option value="4-2">Sistema 4-2</option>
                 <option value="6-6">Sistema 6-6</option>
                 <option value="5-1">Sistema 5-1</option>
@@ -68,8 +68,8 @@
                     <option value="16">Ventajas</option>
                     <option value="17">Desventajas</option>
             </select>
-                        <select id="color">
-                <option value="">Trazo de pizarra</option>
+            <select id="color">
+                <option value="">Pizarra</option>
                 <option value="red">Rojo</option>
                 <option value="blue">Azul</option>
                 <option value="orange">Naranja</option>
@@ -81,7 +81,7 @@
                 <option value="pink">Rosa</option>
                 <option value="purple">Púrpura</option>
             </select>
-            <button class="button-borrar"onclick="borrarDibujo()">Borrar Dibujo</button>
+            <button class="button-borrar" id="btnBorrar" onclick="borrarDibujo()">Borrar Dibujo</button>
         </div>
 
     </div>
@@ -139,7 +139,7 @@
     </div>
     <div class="mobile">
         <div id="drag-0" class="draggable">
-            <img src="assets/img/ball.png" alt="" class="local">
+            <img src="assets/img/ball1.png" alt="" class="ball">
         </div>
         <div id="drag-1" class="draggable">
             <img src="assets/img/squirtleLeft.png" alt="" class="local">
@@ -161,11 +161,29 @@
         <div id="drag-6" class="draggable">
             <img src="assets/img/wartortleLeft.png" alt="" class="local">
         </div>
+        <div id="drag-7" class="draggable">
+            <img src="assets/img/squirtleLeft.png" alt="" class="visitor">
+        </div>
+        <div id="drag-8" class="draggable">
+            <img src="assets/img/bulbasaurLeft.png" alt="" class="visitor">
+        </div>
+        <div id="drag-9" class="draggable">
+            <img src="assets/img/charmander.png" alt="" class="visitor">
+        </div>
 
-    <canvas id="main-container" width="1550" height="980" style="background: url('assets/img/field.png')"></canvas>
-       <!--     <div class="field" id="field">
-            <img src="assets/img/field.png" alt="">
-            </div>-->
+        <div id="drag-10" class="draggable">
+            <img src="assets/img/rattataLeft.png" alt="" class="visitor">
+        </div>
+
+        <div id="drag-11" class="draggable">
+            <img src="assets/img/ivysaur.png" alt="" class="visitor">
+        </div>
+        <div id="drag-12" class="draggable">
+            <img src="assets/img/wartortleLeft.png" alt="" class="visitor">
+        </div>
+
+        <canvas id="main-container" width="1550" height="980" style="background: url('assets/img/field.png')"></canvas>
+
     </div>
     </div>
 
@@ -173,5 +191,6 @@
 <script src="assets/js/move_player.js"></script>
 <script src="assets/js/clase.js"></script>
 <script src="assets/js/mov.js"></script>
+<script src="assets/js/mobile.js"></script>
 
 </html>

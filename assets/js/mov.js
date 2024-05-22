@@ -22,7 +22,11 @@ const dibujar = (cursorX, cursorY) =>
 
     trazo.style.color = selectedValue;
     trazo.style.fontWeight = "bold";
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> c9716188c727294be8c51a4334077e52d6a40982
     context.beginPath();
     context.moveTo(initialX, initialY);
     context.lineWidth = 10;
@@ -80,6 +84,7 @@ mainCanvas.addEventListener('touchstart', mouseDown);
 mainCanvas.addEventListener('touchend', mouseUp);
 
 // boton para borrar el dibujo
-function borrarDibujo() {
-context.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+function borrarDibujo()
+{
+    context.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
 };

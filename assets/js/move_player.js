@@ -5,6 +5,7 @@ const visitor = document.querySelectorAll('.visitor');
 const numero = document.querySelectorAll('.numero');
 const numVisita = document.querySelectorAll('.numVisita');
 
+
 localTeamSelect.addEventListener('change', () =>
 {
     const selectedValue = localTeamSelect.value;
@@ -18,7 +19,7 @@ localTeamSelect.addEventListener('change', () =>
             img.setAttribute('src', `assets/img/${selectedValue}.png`);
             img.setAttribute('alt', `Player ${index + 1}`);
         });
-        document.getElementById("ball").setAttribute('src', 'assets/img/ball.png');
+        document.getElementById("ball").setAttribute('src', 'assets/img/ball1.png');
 
         // hace visible los numeros de cada jugador cuando hay un equipo elegido
         numero.forEach(p =>

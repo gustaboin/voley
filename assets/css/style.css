@@ -41,58 +41,58 @@
 #play12 {
     position: absolute;
     z-index: 1000;
-    left: 1348px;
-    top: 442px;
+    left: 1248px;
+    top: 560px;
 }
 
 #play11 {
     position: absolute;
     z-index: 1000;
-    left: 1344px;
-    top: 739px;
+    left: 1214px;
+    top: 780px;
 }
 
 #play10 {
     position: absolute;
     z-index: 1000;
-    left: 1234.5px;
-    top: 642.5px;
+    left: 920px;
+    top: 780px;
 }
 
 #play9 {
     position: absolute;
     z-index: 1000;
-    left: 998px;
-    top: 520px;
+    left: 888px;
+    top: 572px;
 }
 
 #play8 {
     position: absolute;
     z-index: 1000;
-    left: 991px;
-    top: 722px;
+    left: 886px;
+    top: 380px;
     filter: brightness(140%);
 }
 
 #play7 {
     position: absolute;
     z-index: 1000;
-    left: 1131px;
-    top: 335px;
-}
-
-#play4 {
-    position: absolute;
-    z-index: 1000;
-    left: 383px;
-    top: 360.5px;
+    left: 1210px;
+    top: 380px;
 }
 
 #play5 {
     position: absolute;
     z-index: 1000;
-    left: 313px;
-    top: 724.5px;
+    left: 333px;
+    top: 360.5px;
+}
+
+#play1 {
+    position: absolute;
+    z-index: 1000;
+    left: 280px;
+    top: 805px;
 }
 
 #play6 {
@@ -102,25 +102,25 @@
     top: 554.5px;
 }
 
-#play1 {
+#play4 {
     position: absolute;
     z-index: 1000;
-    left: 763px;
-    top: 316.5px;
+    left: 630px;
+    top: 400px;
     filter: brightness(140%);
-}
-
-#play2 {
-    position: absolute;
-    z-index: 1000;
-    left: 765px;
-    top: 604.5px;
 }
 
 #play3 {
     position: absolute;
     z-index: 1000;
-    left: 725px;
+    left: 652px;
+    top: 620px;
+}
+
+#play2 {
+    position: absolute;
+    z-index: 1000;
+    left: 675px;
     top: 758.5px;
 }
 
@@ -224,33 +224,33 @@ select option {
 
 /* Estilo para el botón */
 .button-borrar {
-    background-color: #f2f2f2; 
-    color: #fc0d0d; 
+    background-color: #f2f2f2;
+    color: #fc0d0d;
     border: 1px solid #ccc;
-    border-radius: 4px; 
-    padding: 10px 20px; 
+    border-radius: 4px;
+    padding: 10px 20px;
     font-family: 'Righteous';
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Estilo para cuando el cursor está sobre el botón */
-  .button-borrar:hover {
-    background-color: #e0e0e0; 
-    color: #007BFF; 
-  }
-  
-  /* Estilo para cuando el botón está activo o presionado */
-  .button-borrar:active {
+}
+
+/* Estilo para cuando el cursor está sobre el botón */
+.button-borrar:hover {
+    background-color: #e0e0e0;
+    color: #007BFF;
+}
+
+/* Estilo para cuando el botón está activo o presionado */
+.button-borrar:active {
     background-color: #ccc;
-    color: #000; 
-  }
+    color: #000;
+}
 
 @media screen and (max-width: 700px) {
 
     .draggable {
-        display: block;
+        display: inline-block;
     }
 
     #drag-0,
@@ -259,9 +259,14 @@ select option {
     #drag-3,
     #drag-4,
     #drag-5,
-    #drag-6 {
-        width: max-content;
-        min-height: 2.5 em;
+    #drag-6,
+    #drag-7,
+    #drag-8,
+    #drag-9,
+    #drag-10,
+    #drag-11,
+    #drag-12 {
+        min-height: 1.5 em;
         margin: 1 rem;
         background-color: none;
         color: white;
@@ -269,6 +274,10 @@ select option {
         touch-action: none;
         user-select: none;
         transform: translate(0px, 0px);
+    }
+
+    select {
+        margin: 2px 0;
     }
 
 }
@@ -279,14 +288,15 @@ select option {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  }
-  
-  canvas {
-    background-color: #fff;
-  }
+}
 
-@media screen and (max-width: 700px) {
+canvas {
+    background-color: #fff;
+}
+
+
+
+@media screen and (max-width: 540px) {
     .playWeb {
         display: none;
     }
@@ -298,4 +308,6 @@ select option {
     .mobile {
         background-image: url("assets/img/field.jpg");
     }
+
+
 }
