@@ -12,4 +12,5 @@ Draw out your coolest tactics and strategies with vibrant lines in every color o
 Whether you're crafting the perfect 4-2 formation or plotting a sneaky play, this app makes practice fun and engaging. It's a basic yet exciting way to learn and enjoy the game of volleyball while having a blast with Pokémon pals!
 
 <img src="https://gustaboin.github.io/voley/assets/img/charmeleonLeft.png"><img src="https://gustaboin.github.io/voley/assets/img/ivysaur.png"><img src="https://gustaboin.github.io/voley/assets/img/rattataLeft.png">
+<img src="https://gustaboin.github.io/voley/assets/img/ball.png">
 <img src="https://gustaboin.github.io/voley/assets/img/nidoranR.png"><img src="https://gustaboin.github.io/voley/assets/img/vulpix.png"><img src="https://gustaboin.github.io/voley/assets/img/pikachu.png">
